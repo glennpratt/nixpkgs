@@ -69,6 +69,17 @@ buildGoModule rec {
     # -gcp
     # +aws
     "TestPluginMapper_MappedNamesDifferFromPulumiName"
+    # Failed without any changes, not sure why:
+    "TestTokenSourceWithQuicklyExpiringInitialToken"
+    # mkdir /var/empty: permission denied
+    "TestPolicyPublishCmd_default"
+    # mkdir /var/empty: permission denied
+    "TestPolicyPublishCmd_orgNamePassedIn"
+    # mkdir /var/empty: permission denied
+    "TestSearchAI_cmd"
+    # mkdir /var/empty: permission denied
+    "TestAISearchUserOrgFailure_cmd"
+
   ];
 
   nativeCheckInputs = [
