@@ -80,6 +80,9 @@ in
 
     unnamed.succeed("cat /tmp/cloudinit-write-file | grep -q 'cloudinit'")
 
+    # keys_to_console found its helper and logged the host key fingerprints
+    unnamed.succeed("journalctl -b -t cloud-init | grep -q 'BEGIN SSH HOST KEY FINGERPRINTS'")
+
     # install snakeoil ssh key and provision .ssh/config file
     unnamed.succeed("mkdir -p ~/.ssh")
     unnamed.succeed(
