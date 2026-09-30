@@ -166,6 +166,8 @@ in
       ];
     };
 
+    environment.systemPackages = [ pkgs.cloud-init ];
+
     environment.etc."cloud/cloud.cfg" =
       if cfg.config == "" then { source = cfgfile; } else { text = cfg.config; };
 
