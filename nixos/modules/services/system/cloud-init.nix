@@ -129,7 +129,6 @@ in
       preserve_hostname = lib.mkDefault false;
 
       cloud_init_modules = lib.mkDefault [
-        "migrator"
         "seed_random"
         "bootcmd"
         "write-files"
@@ -154,7 +153,6 @@ in
       ];
 
       cloud_final_modules = lib.mkDefault [
-        "rightscale_userdata"
         "scripts-vendor"
         "scripts-per-once"
         "scripts-per-boot"
